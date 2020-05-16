@@ -13,7 +13,7 @@ $saldo += 100;
 $desconto = 0.5;
 $saldo *= $desconto;
 
-echo "comparate operators >, >=. <, <=, ==, !=, <br>";
+echo "comparate operators >, >=. <, <=, ==, !=, &&(and), ||(or). <br>";
 
 var_dump($saldo > $desconto);
 var_dump($saldo < $desconto);
