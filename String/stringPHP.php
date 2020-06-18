@@ -6,11 +6,20 @@ echo 'with simple quote i can write $nome, $this, if{}, else{}.... into a echo w
 $nome = 'gustavo';
 $sobreNome = 'cenci';
 
+$cenci = "Montanini";
+
+$completName = $nome.$sobreNome.$cenci;
+
+echo "$completName";
+
+
 var_dump($nome);
 var_dump($sobreNome);
 
+
 echo "<br>"
-echo "strtoupper($nome)";
+echo strtoupper($nome);
+echo "<br>" 	
+echo strtolower($sobreNome);
 
-
- ?>
+?>
