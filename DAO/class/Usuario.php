@@ -50,6 +50,33 @@ class Usuario{
 		}
 	}
 
+	public static function getAllUsers(){
+		$sql = new Sql();
+		$results = $sql->select("SELECT * FROM tb_usuarios ORDER BY deslogin");
+		return $results;
+	}
+
+	public static function getAllUserLike($like){
+		$sql = new Sql();
+		$results = $sql->select("SELECT * FROM tb_usuarios WHERE deslogin LIKE :SEARCH",array(':SEARCH'=>"%".$like."%"));
+		return $results;
+	}
+
+	public function login($user, $pass){
+		$sql = new Sql();
+		$results = $sql->select("SELECT * FROM tb_usuarios WHERE deslogin = :LOGIN AND dessenha = :PASS",array(':LOGIN'=>$user,
+				   ':PASS'=>$pass));
+		if(count($results)>0){
+			$row = $results[0];
+			$this->setIdusuario($row['idusuario']);
+			$this->setDeslogin($row['deslogin']);
+			$this->setDessenha($row['dessenha']);
+			$this->setDtcadastro(new DateTime($row['dtcadastro']));
+		}else{
+			throw new Exception("DEU RUIM PARCEIRO, Senha ou Pass erradao vey (0_0)"); 
+		}
+	}
+
 	public function __toString(){
 		return json_encode(array(
 					 "idusuario"=>$this->getIdusuario(),
