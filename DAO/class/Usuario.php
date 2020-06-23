@@ -6,6 +6,13 @@ class Usuario{
 	private $dessenha;
 	private $dtcadastro;
 
+	public function __construct($idusuario = "", $deslogin = "", $dessenha = "", $dtcadastro ="" ){
+		$this->idusuario = $idusuario;
+		$this->deslogin = $deslogin;
+		$this->dessenha = $dessenha;
+		$this->dtcadastro = $dtcadastro;
+	}
+
 	public function setIdusuario($id){
 		$this->idusuario = $id;
 	}
@@ -75,6 +82,36 @@ class Usuario{
 		}else{
 			throw new Exception("DEU RUIM PARCEIRO, Senha ou Pass erradao vey (0_0)"); 
 		}
+	}
+
+	public function insertUserUsingSetAndGet(){
+		$sql = new Sql();
+		$sql->query("INSERT INTO tb_usuarios (deslogin, dessenha) VALUES (:LOGIN, :PASS)",array(
+			':LOGIN'=>$this->getDeslogin(),
+			':PASS'=>$this->getDessenha()));
+
+		$results = Usuario::getAllUserLike($this->getDeslogin());
+		if(count($results)>0){
+			$this->serchData($results[0]);
+		}
+	}
+
+	public function insertAndGetUsingPROCEDURE(){
+		$sql = new Sql();
+		$results = $sql->select("CALL sp_usuarios_insert (:LOGIN, :PASS)",
+			array(
+			':LOGIN'=>$this->getDeslogin(),
+			':PASS'=>$this->getDessenha()));
+		if(count($results)>0){
+			$this->serchData($results[0]);
+		}		
+	}
+
+	public function serchData($results){
+			$this->setIdusuario($results['idusuario']);
+			$this->setDeslogin($results['deslogin']);
+			$this->setDessenha($results['dessenha']);
+			$this->setDtcadastro(new DateTime($results['dtcadastro']));
 	}
 
 	public function __toString(){
