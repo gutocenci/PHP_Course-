@@ -49,11 +49,7 @@ class Usuario{
 		$sql = new Sql();
 		$results = $sql->select("SELECT * FROM tb_usuarios WHERE idusuario = :ID", array(':ID'=>$id));
 		if(count($results) > 0){
-			$row = $results[0];
-			$this->setIdusuario($row['idusuario']);
-			$this->setDeslogin($row['deslogin']);
-			$this->setDessenha($row['dessenha']);
-			$this->setDtcadastro(new DateTime($row['dtcadastro']));
+			$this->serchData($results[0]);
 		}
 	}
 
@@ -112,6 +108,24 @@ class Usuario{
 			$this->setDeslogin($results['deslogin']);
 			$this->setDessenha($results['dessenha']);
 			$this->setDtcadastro(new DateTime($results['dtcadastro']));
+	}
+
+	public function update($deslogin, $dessenha){
+		$this->setDeslogin($deslogin);
+		$this->setDessenha($dessenha);
+		$sql = new Sql();
+		$sql->query("UPDATE tb_usuarios SET deslogin = :LOGIN, dessenha = :PASS WHERE idusuario = :ID",array(':ID'=>$this->getIdusuario(),
+				  ':LOGIN'=>$this->getDeslogin(),
+				  ':PASS'=>$this->getDessenha()));
+	}
+
+	public function updateOnlyQuery($deslogin, $dessenha){
+		$this->setDeslogin($deslogin);
+		$this->setDessenha($dessenha);
+		$sql = new Sql();
+		$sql->query("UPDATE tb_usuarios SET deslogin = :LOGIN, dessenha = :PASS WHERE idusuario = :ID",array(':ID'=>$this->getIdusuario(),
+				  ':LOGIN'=>$this->getDeslogin(),
+				  ':PASS'=>$this->getDessenha()));
 	}
 
 	public function __toString(){
