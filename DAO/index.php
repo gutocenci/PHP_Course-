@@ -48,8 +48,12 @@ echo json_encode($user);*/
 //$update->update("5","LoginTest1","SenhaTeste1");
 
 //UPDATE NO BANCO USANDO A FUNCAO QUE RETORNA OS VALORES QUE SAO SET NO OBJETO PELO NUMERO DO ID, COM O OBJETO JA PREENCHIDO BASTOU PASSAR APENAS OQ VAI SER OS PARAMETROS COM OQ VAI SER ATUALIZADO NO BANCO
-$update2 = new Usuario();
-$update2->setUserById(5);
-$update2->updateOnlyQuery("UPDATELoginTest","UPDATESenhaTeste1"); 
-echo $update2;
+//$update2 = new Usuario();
+//$update2->setUserById(5);
+//$update2->updateOnlyQuery("UPDATELoginTest","UPDATESenhaTeste1"); 
+//echo $update2;
+
+//DELETE
+$delete = new Usuario(5,"","","");
+$delete->delete(); 
 ?>

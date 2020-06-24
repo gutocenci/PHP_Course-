@@ -128,6 +128,12 @@ class Usuario{
 				  ':PASS'=>$this->getDessenha()));
 	}
 
+	public function delete(){
+		$sql = new Sql();
+		$sql->query("DELETE FROM tb_usuarios WHERE idusuario = :ID",array(':ID'=>$this->getIdusuario()));
+
+	}
+
 	public function __toString(){
 		return json_encode(array(
 					 "idusuario"=>$this->getIdusuario(),
