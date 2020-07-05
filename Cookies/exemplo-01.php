@@ -13,8 +13,10 @@ echo "Cookie criado </br>";
 
 //PARA RECUPERAR USAMOS A VARIVEL GLOBAL $_COOKIE PASSANDO O NOME DO COOKIE DESEJADO
 if(isset($_COOKIE['cookieTest'])){
-	print_r(json_decode($_COOKIE['cookieTest'],true));
+	//print_r(json_decode($_COOKIE['cookieTest'],true));
 	//objCookie = json_decode($_COOKIE['cookieTest']);
 	//echo objCookie->nome;
+	$cookieArray = json_decode($_COOKIE['cookieTest'],true);
+	echo "Welcome: ".$cookieArray['nome']." ty for using our site again!</br>";
 }
 ?>
