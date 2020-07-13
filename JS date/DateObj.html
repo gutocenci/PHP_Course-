@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<body>
+
+		<a>DD/MM/YY from getDate, getMonth and getFullYear</a>
+		<p id="DDMMYY"></p>
+
+		<a>DD/MM/YY from getTime(timestamp)</a>
+		<p id="timestamp"></p>
+
+			<script>
+				var d = new Date();
+				var day = d.getDate();
+				var month = d.getMonth();
+				var year = String(d.getFullYear());
+
+				var timestamp = new Date().getTime();
+				var dateFull = new Date(timestamp);
+				var dayStamp = new Date(timestamp).getDate();
+				var monthStamp = new Date(timestamp).getMonth();
+				var yearStamp = String (new Date(timestamp).getFullYear());
+
+				function getDDMMYY(){
+				return (dayStamp + "/" + monthStamp + "/" + yearStamp.slice(2));
+				}
+
+				function getDDMMYYTimeStamp(){
+				return (day + "/" + month + "/" + year.slice(2));
+				}
+
+				document.getElementById("DDMMYY").innerHTML = getDDMMYY();
+				document.getElementById("timestamp").innerHTML = getDDMMYYTimeStamp();
+
+		</script>
+
+	</body>
+</html>
