@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: darkgray;
+    margin: 0px;
+}
+
+.headerPage {
+    background-image: url(bg-3.jpg);
+    background-position: right center;
+    background-size: cover;
+    height: 500px;
+}
+
+.divHeader {
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+}
+
+.divHeader h1 {
+    text-transform: uppercase;
+    font-size: 30px;
+    text-shadow: 5px 5px 5px black;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+}
+
+.headerArticle h2 {
+    background-color: lightgray;
+    padding: 8px;
+    border-bottom: 5px solid gray;
+}
+
+.sectionContends {
+    background-color: white;
+    padding: 15px;
+    margin: 10px;
+}
+
+.footer {
+    background-color: gray;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px;
+    color: white;
+    height: 40px;
+    text-shadow: 3px 3px 5px black;
+}
