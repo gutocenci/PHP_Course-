@@ -9,6 +9,33 @@ body {
     background-position: right center;
     background-size: cover;
     height: 500px;
+    border-top: solid transparent 1px;
+}
+
+.headerPage ul{
+    text-align: right;
+    margin: 5px 10px 0px 0px;
+}
+
+.headerPage li{
+    list-style: none;
+    background: rgba(0,0,0, 0.2);
+    display: inline-block;
+    padding: 10px;
+    margin: 8px;
+    border: solid white 0.5px;
+}
+
+.headerPage a{
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.headerPage li:hover{
+    background: rgba(0,0,0, 0.3);
 }
 
 .divHeader {
