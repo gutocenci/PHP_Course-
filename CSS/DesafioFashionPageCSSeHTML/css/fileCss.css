@@ -1,6 +1,6 @@
 body {
     width: 85%;
-    margin: 2% 7%;
+    margin: 20px auto;
 }
 
 .navHeader {
@@ -18,7 +18,7 @@ body {
 .imgLogo {
     position: absolute;
     top: 3px;
-    left: 60px
+    left: 150px
 }
 
 .imgHead {
@@ -40,6 +40,11 @@ body {
     text-decoration: none;
     letter-spacing: 1px;
     color: white;
+    transition: color 0.3s linear;
+}
+
+.menuNav a:hover {
+    color: rgb(90, 7, 167);
 }
 
 article {
@@ -89,13 +94,13 @@ article p {
     width: 100%;
 }
 
-.sectionPage{
+.sectionPage {
     position: relative;
     background-color: black;
     background-image: url(../imagens/bg_detalhe.png);
     height: 500px;
     background-repeat: no-repeat;
-    background-position: bottom right ;
+    background-position: bottom right;
     background-size: unset;
     color: white;
     width: 100%;
@@ -104,14 +109,43 @@ article p {
     margin-bottom: 40px;
 }
 
-.sectionContent {width: 60%; height: 40%; position: absolute; left: 100px; top: 100px;}
+.sectionContent {
+    width: 60%;
+    height: 40%;
+    position: absolute;
+    left: 100px;
+    top: 100px;
+}
 
-.sectionContent h1 {font-size: 35px;  text-transform: uppercase;}
+.sectionContent h1 {
+    font-size: 35px;
+    text-transform: uppercase;
+}
 
-.sectionContent p {color: rgba(255, 255, 255, 0.9);}
+.sectionContent p {
+    color: rgba(255, 255, 255, 0.9);
+}
 
-h2 {text-align: center; color: black; font-family: Arial, Helvetica, sans-serif; text-transform: uppercase; margin: 0;}
+address {color: #143f52;
+text-transform: uppercase;
+font-size: 15px;
+line-height: 8px;
+font-style: normal;
+text-align: center;
+font-weight: bold;
+font-family: Arial, Helvetica, sans-serif;
+}
 
-.maps {margin-top: 40px; width: 100%;}
+.maps {
+    margin-top: 40px;
+    width: 100%;
+}
 
-footer {background-color: black; color: white; padding: 5px; text-align: center; letter-spacing: 3px; margin-top: 30px;}
+footer {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-top: 30px;
+}
