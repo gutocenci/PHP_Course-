@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <style>
+        ul {
+            background-color: lightgray;
+            height: auto;
+        }
+
+        li {
+            background-color: yellow;
+            border: solid 2px black;
+        }
+
+        li ul {
+            height: 0px;
+            transition: height 0.5s;
+            overflow: hidden;
+        }
+
+        li:hover ul {
+            height: 100px;
+            border-collapse: collapse;
+        }
+
+        table,
+        article {
+            border-collapse: collapse;
+            width: 30%;
+            margin: auto;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        td,
+        th {
+            border: solid black 2px;
+            padding: 10px;
+            text-align:
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Listas Ordenadas</h1>
+    <ul> Lista 1
+        <li>Item 1</li>
+        <li>Item 2
+            <ul> Lista 2
+                <li>Item 3</li>
+                <li>Item 4</li>
+                <li>Item 5</li>
+            </ul>
+        </li>
+    </ul>
+    <hr>
+    <h1>Definitions and descripitions tags</h1>
+    <p>1 DT para um 1 DD</p>
+    <dl>
+        <dt>WWW</dt>
+        <dd>Web</dd>
+    </dl>
+    <p>2 DT para um 1 DD</p>
+    <dl>
+        <dt>Animal</dt>
+        <dt>Pet</dt>
+        <dd>Cachorro</dd>
+    </dl>
+
+    <p>1 DT para um 2 DD</p>
+    <dl>
+        <dt>Animal</dt>
+        <dd>Ser vivo</dd>
+        <dd>Cachorro</dd>
+    </dl>
+    <hr>
+    <h1>Tabelas</h1>
+    <table>
+        <thead>
+            <article>Web Basic</article>
+            <tr>
+                <th>JS</th>
+                <th>CSS</th>
+                <th>HTML</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="3">rodape compridao pra poha</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td rowspan="3">L.program</td>
+                <td>Strutc</td>
+                <td>Style</td>
+            </tr>
+            <tr>
+                <td>Strutc</td>
+                <td>Style</td>
+            </tr>
+            <tr>
+                <td>Strutc</td>
+                <td>Style</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
