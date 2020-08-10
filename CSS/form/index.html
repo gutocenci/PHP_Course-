@@ -1,0 +1,80 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+
+<head>
+    <title>Forms HTML</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Gustavo Cenci">
+    <meta name="description" content="Form HTML">
+    <meta name="keywords" content="form, html5, tecnologia">
+    <style>
+        .formLogin {
+            width: 30%;
+            margin: 20px auto;
+            font-family: sans-serif;
+        }
+
+        legend {
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background-color: rgb(255, 255, 255, 0.6);
+            border: solid black 1px;
+        }
+
+        fieldset label {
+            margin: 5px 0px;
+            display: inline-block;
+        }
+
+        fieldset {
+            padding: 20px;
+            background-color: #ccc;
+        }
+
+        .btn {
+            width: 50%;
+            margin: 20px auto 0px;
+            text-transform: uppercase;
+            padding: 10px;
+            display: block;
+            box-sizing: border-box;
+        }
+
+
+        #logUser,
+        #logPwd{
+            display: block;
+            width: 90%;
+            box-sizing: border-box;
+        }
+
+        #logUser:focus, #logPwd:focus {background-color: lightyellow;}
+    </style>
+</head>
+
+<body>
+    <h1>Form basico</h1>
+    <form action="http://google.com/search" method="GET" target="_blank">
+        <label form="txtSearch">Insira o texto a ser procurado no Google</label>
+        <br>
+        <input type="text" name="q" id="txtSearch">
+        <input type="submit" value="OK">
+    </form>
+    <br>
+    <hr>
+    <br>
+    <form class="formLogin" action="#" method="POST">
+        <fieldset>
+            <legend>Login FieldSet</legend>
+            <label for="logUser">Usuario:</label>
+            <input id="logUser" type="text" name="user" autofocus>
+            <label for="logPwd" type="text">Senha:</label>
+            <input id="logPwd" type="password" name="pwd">
+            <input class="btn" type="submit" value="Logar">
+        </fieldset>
+    </form>
+</body>
+
+</html>
