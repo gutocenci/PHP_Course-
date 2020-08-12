@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Border Radious</title>
+    <style>
+        #mae {
+            background: lightgray;
+            width: 500px;
+            height: 350px;
+        }
+
+        #mae div {
+            background-color: orange;
+            width: 240px;
+            height: 160px;
+            float: left;
+            margin: 5px;
+        }
+
+        #div1{border-radius: 20px;}
+
+        #div2 {border-radius: 100%;}
+
+        #div3 {border-radius: 20px 50px 100px 0px;}
+
+        #div4 {border-radius: 100% 5% / 50% 2.5%;}
+    </style>
+</head>
+
+<body>
+    <div id="mae">
+        <div id="div1">
+            <p>Div 1</p>
+        </div>
+        <div id="div2">
+            <p>Div 2</p>
+        </div>
+        <div id="div3">
+            <p>Div 3</p>
+        </div>
+        <div id="div4">
+            <p>Div 4</p>
+        </div>
+    </div>
+</body>
+
+</html>

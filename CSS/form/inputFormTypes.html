@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Gustavo Cenci">
+    <meta name="description" content="Form HTML">
+    <meta name="keywords" content="form, html5, tecnologia">
+    <style>
+        form {
+            width: 60%;
+            margin: auto;
+        }
+
+        form input {
+            display: block;
+            margin: 5px 0px;
+        }
+
+        label {
+            margin: 5px 0px;
+            display: inline-block;
+        }
+
+        .fieldSetInside input {
+            display: inline;
+            margin: 0px 5px;
+        }
+
+        .fieldSetInside {
+            width: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="GET" action="#">
+        <h1>Exemplo de Form</h1>
+        <p>Para efeito de estudos, nao foi usado name=? for=?</p>
+        <fieldset>
+
+            <legend>Dados Pessoais</legend>
+
+            <label>Email</label>
+            <input type="email" required maxlength="20" placeholder="Digite um E-mail">
+            <label>Senha</label>
+            <input type="password" >
+            <label>Number</label>
+            <input type="number" min="0" max="255">
+            <label>Telefone</label>
+            <input type="tel" required pattern="[0-9]{5}.[0-9]{4}">
+            <label>Date</label>
+            <input type="date" min="1999-01-01" max="2050-01-01">
+            <label>GitHub</label>
+            <input type="url">
+            <label>Arquivos</label>
+            <input type="file" multiple>
+            <label>Color</label>
+            <input type="color">
+            <label>Time</label>
+            <input type="time">
+            <label>Range</label>
+            <input type="range" min="1" max="10" step="2">
+            <label>Estado</label>
+            <select name="estado">
+                <label>Radio</label>
+                <option value="0">Selecione</option>
+                <option value="SP">SP</option>
+                <option value="RJ">RJ</option>
+                <option value="MG">MG</option>
+            </select>
+
+          
+
+            <fieldset class="fieldSetInside">
+                <legend>Sexo</legend>
+
+                <label>
+                    <input type="radio" value="M" name="sexo">
+                    Masculino</label>
+                <label>
+                    <input type="radio" value="F" name="sexo">
+                    Feminino</label>
+            </fieldset>
+
+            <fieldset class="fieldSetInside">
+                <legend>Area de Interrese</legend>
+
+                <label><input type="checkbox" value="html" name="html"> HTML</label>
+                <label><input type="checkbox" value="CSS" name="css"> CSS</label>
+                <label><input type="checkbox" value="js" name=js>JS</label>
+            </fieldset>
+
+            <fieldset class="fieldSetInside">
+                <legend>Contrato de uso</legend>
+
+                <textarea style="resize: none;" name="contractArea" cols="30" rows="10" disabled>Os termos de uso da aplicação ficaram escritos aqui, por favor leia e concorde !!
+                </textarea>
+                <label><input checked type="checkbox" value="readConfirmed" name="contractCheck">Li e aceito os
+                    termos...</label>
+            </fieldset>
+
+        </fieldset>
+        <input type="hidden" value="2050-01-01" name="hidden">
+        <input type="submit" value="Enviar Form">
+        <input type="button" value="Botao sem ação">
+        <input type="reset">
+    </form>
+</body>
+
+</html>
