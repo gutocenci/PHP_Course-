@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Border Radious</title>
+    <style>
+        #mae {
+            background: white;
+            width: 600px;
+            height: 350px;
+        }
+
+        #mae div {
+            background-color: black;
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 40px;
+            padding: 20px;
+            border-radius: 100%;
+            box-sizing: border-box;
+            border: solid 10px green;
+            color: white;
+        }
+
+        h1 {text-align: center; font-family: sans-serif; margin-bottom: 50px;}
+
+        #div1 {box-shadow:10px 10px blue;}
+
+        #div2 {box-shadow:10px 10px 10px blue;}
+
+        #div3 {box-shadow:0px 0px 20px 30px blue;}
+
+        #div4 {box-shadow:-10px -10px 10px 5px blue;}
+
+        #div5 {box-shadow: 20px 20px 0px -10px blue;}
+
+        #div6 {box-shadow:10px 10px blue,
+            -10px 10px red,
+            10px -10px yellow,
+            -10px -10px orange;}
+        p {text-align: center; text-shadow: 1px 1px 0px black,
+            2px 2px 0px rgba(0, 0, 0, 0.750), 
+            3px 3px 0px rgba(0, 0, 0, 0.650),
+            4px 4px 0px rgba(0, 0, 0, 0.350),
+            5px 5px 0px rgba(0, 0, 0, 0.150);}
+        
+        #pBrush {color: green; text-shadow: 5px 5px 3px black}
+    </style>
+</head>
+
+<body>
+    <h1>Box-Shadow</h1>
+    <div id="mae">
+        <div id="div1">
+            <p>Div 1</p>
+        </div>
+        <div id="div2">
+            <p>Div 2</p>
+        </div>
+        <div id="div3">
+            <p>Div 3</p>
+        </div>
+        <div id="div4">
+            <p>Div 4</p>
+        </div>
+        <div id="div5">
+            <p>Div 5</p>
+        </div>
+        <div id="div6">
+            <p>Div 6</p>
+        </div>
+    </div>
+    <h1>Text-Shadow</h1>
+    <p>Text com Shadow</p>
+    <p id="pBrush">Text com Shadow e Brush</p>
+</body>
+
+</html>

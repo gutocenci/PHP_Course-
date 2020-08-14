@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gradient</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <style>
+
+        /*@font-face {font-family: 'Alata';
+            src: url(Alata-Regular.ttf) format('ttf');}*/
+
+        body {
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient(to bottom, transparent, gray, black);
+            font-family: 'Alata';
+        }
+
+        .motherDiv {
+            background-color: black;
+            overflow: auto;
+            width: 95%;
+            margin: 10px auto;
+        }
+
+        .motherDiv div {
+            font-size: 16px;
+            box-sizing: border-box;
+            color: white;
+            float: left;
+            background-color: green;
+            margin: 20px;
+            padding: 100px;
+        }
+
+        #div1 {
+            background-image: linear-gradient(red, blue);
+        }
+
+        #div2 {
+            background-image: linear-gradient(to right, red, blue);
+        }
+
+        #div3 {
+            background-image: linear-gradient(to left, red, blue);
+        }
+
+        #div4 {
+            background-image: linear-gradient(to top, red, blue);
+        }
+
+        #div5 {
+            background-image: linear-gradient(red, blue);
+        }
+
+        #div6 {
+            background-image: linear-gradient(to right top, red, green, blue);
+        }
+
+        #div7 {
+            background-image: linear-gradient(to bottom left, red, transparent)
+        }
+
+        #div8 {
+            background-image: linear-gradient(to bottom left, red, transparent, blue);
+        }
+
+        #div9 {
+            background-image: linear-gradient(to top, transparent, black), 
+            url(https://image.freepik.com/fotos-gratis/o-brandamente-nebuloso-e-pastel-do-inclinacao-fundo-abstrato-do-ceu-na-cor-doce_6529-1434.jpg);
+            background-size: cover;
+        }
+
+        #div10 {background-image: linear-gradient(45deg, black 200px, white 5px, yellow, green, blue, red, orange);}
+
+        #div11 {background-image: linear-gradient(90deg, black 70%, white 0px 85%, orange 0px 100%);}
+
+        #div12 {background-image: linear-gradient(90deg, black 0px 10%, red 0px 20%, blue 0px 30%, green 0px 40%, yellow 0px 50%, gray 0px 60%, white 0px 70%, orange 0px 80%, purple 0px 90%, violet 0px 100%);}
+
+        h1,
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Gradient CSS</h1>
+    <p>Passe o mouse para ver os efeitos do Gradient</p>
+    <div class="motherDiv">
+        <div id="div1">Div 1</div>
+        <div id="div2">Div 2</div>
+        <div id="div3">Div 3</div>
+        <div id="div4">Div 4</div>
+        <div id="div5">Div 5</div>
+        <div id="div6">Div 6</div>
+        <div id="div7">Div 7</div>
+        <div id="div8">Div 8</div>
+        <div id="div9">Div 9</div>
+        <div id="div10">Div 10</div>
+        <div id="div11">Div 11</div>
+        <div id="div12">Div 12</div>
+    </div>
+
+
+
+
+</body>
+
+</html>
